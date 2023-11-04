@@ -1,6 +1,6 @@
 # Overview
 
-ABMA is a cutting-edge approach designed to enhance the security of blockchain-based smart contracts. Utilizing a novel combination of Bayesian Inference Models and Metamorphic Testing, ABMA offers a dynamic and adaptable solution for detecting and mitigating vulnerabilities in smart contracts.
+ABMA is a cutting-edge approach designed to enhance the security of blockchain-based smart contracts. Utilizing a novel integration of Bayesian Inference Models and Metamorphic Testing, ABMA offers a dynamic and adaptable solution for detecting and mitigating vulnerabilities in smart contracts.
 
 ## Key Features:
 
