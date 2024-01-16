@@ -1,158 +1,94 @@
-# Overview
+# ABMA Project: Enhancing Smart Contract Security
 
-ABMA is a cutting-edge approach designed to enhance the security of blockchain-based smart contracts. Utilizing a novel integration of Bayesian Inference Models and Metamorphic Testing, ABMA offers a dynamic and adaptable solution for detecting and mitigating vulnerabilities in smart contracts.
+## Overview
 
-## Key Features:
+The Adaptive Bayesian Metamorphic Assessment (ABMA) introduces a revolutionary approach for enhancing the security of blockchain-based smart contracts. By integrating Bayesian Inference Models with Metamorphic Testing, ABMA stands out as a dynamic and adaptable solution for identifying and mitigating vulnerabilities in smart contracts.
 
-- **Innovative Framework**: ABMA introduces a unique blend of Bayesian inference and Metamorphic Testing for smart contract security assessment.
-  
-- **Probabilistic Approach**: Employs a hierarchical Bayesian model to manage the inherent uncertainties in vulnerability detection.
-  
-- **Dynamic Adaptability**: Utilizes Metamorphic Testing and Dynamic Bayesian Updating to ensure the model evolves with new data and insights.
+## Key Features
 
-## Repository Contents:
+- **Innovative Framework**: Combines Bayesian inference with Metamorphic Testing for comprehensive smart contract security assessment.
+- **Probabilistic Approach**: Employs Bayesian models to effectively manage the uncertainties in vulnerability detection, with a focus on high-risk issues like reentrancy attacks.
+- **Dynamic Testing**: Integrates Metamorphic Testing to adapt to evolving smart contract functions, ensuring relevance and accuracy.
+- **Empirical Validation**: Validated through analysis of 21,116 real-world smart contracts, demonstrating superior performance and real-world applicability.
 
-1. **Bayesian Inference Model**: Scripts for constructing and evaluating the hierarchical Bayesian model for smart contract vulnerabilities.
+## Repository Contents
 
-2. **Metamorphic Testing**: Implementation of Metamorphic Testing techniques to generate meaningful test cases for smart contracts.
+1. **Data Preprocessing Scripts**: Tools and algorithms used for the initial processing of smart contract code, transforming raw data into a format ready for detailed analysis.
 
-3. **Dynamic Bayesian Updating**: Mechanisms for updating the Bayesian model based on the outcomes of Metamorphic Testing.
+2. **Feature Selection Algorithms**: Scripts implementing Bayesian probabilistic techniques to identify and select key features in smart contracts that are indicative of potential vulnerabilities.
+
+3. **Classification and Metamorphic Testing Scripts**: Components that combine the insights from feature selection with dynamic metamorphic testing methodologies. This includes mechanisms for classifying contracts based on their vulnerability profiles and identifying zero-day vulnerabilities.
+
+4. **Bayesian Inference and Dynamic Adaptation**: A suite of scripts that leverage Bayesian inference for vulnerability assessment and dynamically adapt the testing approach based on emerging data and patterns in smart contract behavior.
 
 ## Getting Started
-### Prerequisites
 
-Before you begin, ensure you have the following installed:
+### Prerequisites
 
 - Python (version 3.8 or higher)
 - Git (for cloning the repository)
 
-## Installation:
+### Installation
 
 1. Clone the repository:
+   ```bash
+   git clone https://github.com/niirex1/ABMA-project.git
    ```
-   git clone https://github.com/your_username/ABMA.git
-   ```
-
-2. Install the required packages:
-   ```
+2. Install required packages:
+   ```bash
    pip install -r requirements.txt
    ```
-
-3. Navigate to the repository and run the main script:
-   ```
+3. Run the main script:
+   ```bash
    python main.py
    ```
 
-## Usage:
+## Usage Instructions
 
-1. Load your smart contract source code.
-2. Run the Bayesian Inference Model script to assess the likelihood of vulnerabilities.
-3. Execute the Metamorphic Testing script to generate test cases.
-4. Apply the Dynamic Bayesian Updating script to update the model based on test outcomes.
+1. **Load Smart Contract Source Code**: Begin by importing or loading the source code of the smart contract you wish to analyze.
 
-We welcome contributions from the community! Whether you're fixing bugs, improving documentation, or proposing new features, your efforts and expertise are appreciated. Here's how you can contribute:
+2. **Execute Data Preprocessing Scripts**: Run the data preprocessing tools to transform the raw smart contract code into a structured format that is suitable for in-depth analysis.
 
-### 1. **Fork the Repository**
+3. **Run Feature Selection Algorithms**: Use the feature selection scripts to apply Bayesian probabilistic techniques. This will help in identifying critical features in the smart contract that may indicate vulnerabilities.
 
-Start by forking the [ABMA repository(https://github.com/your_username/ABMA)].
+4. **Perform Classification and Metamorphic Testing**: Execute the scripts for classification and metamorphic testing. This process involves classifying the contracts into different vulnerability categories and applying dynamic testing methodologies to uncover potential security issues, including zero-day vulnerabilities.
 
-### 2. **Clone Your Fork**
+5. **Apply Bayesian Inference and Dynamic Adaptation**: Finally, utilize the Bayesian inference scripts for a detailed vulnerability assessment. Update the Bayesian model dynamically based on the outcomes of the metamorphic testing to ensure the model remains accurate and adapts to new patterns and data.
 
-```bash
-git clone https://github.com/your_username/ABMA.git
-cd ABMA
-```
+## Contributing
 
-### 3. **Create a New Branch**
+We welcome contributions! Here’s how you can contribute:
 
-It's best practice to create a new branch for each feature or fix:
+1. **Fork the Repository**: Fork the [ABMA repository](https://github.com/niirex1/ABMA-project).
 
-```bash
-git checkout -b feature/your_feature_name
-```
-or
-```bash
-git checkout -b fix/your_fix_name
-```
+2. **Clone Your Fork and Create a New Branch**:
+   ```bash
+   git clone https://github.com/your_username/ABMA-project.git
+   cd ABMA-project
+   git checkout -b feature/your_feature_name
+   ```
 
-### 4. **Make Your Changes**
+3. **Make Changes, Commit, and Push**:
+   ```bash
+   git add .
+   git commit -m "Your Commit Message"
+   git push origin feature/your_feature_name
+   ```
 
-- Ensure your code adheres to the project's coding standards.
-- If you're adding a feature, make sure to also add relevant tests and documentation.
-- If you're fixing a bug, ensure the bug is reproducible with a test before you fix it.
+4. **Submit a Pull Request**: Go to your fork on GitHub and create a new pull request.
 
-### 5. **Commit Your Changes**
+5. **Address Review Comments**: Respond to any feedback from maintainers.
 
-Keep your commit messages clear and descriptive:
-
-```bash
-git add .
-git commit -m "Add a brief description of your changes"
-```
-
-### 6. **Push to Your Fork**
-
-```bash
-git push origin feature/your_feature_name
-```
-
-### 7. **Submit a Pull Request (PR)**
-
-Go to your fork on GitHub and click the **"New pull request"** button. Fill in the necessary details and submit.
-
-### 8. **Address Review Comments**
-
-Maintainers will review your PR. Address any comments or feedback they provide to ensure timely merging of your contributions.
-
-### Additional Guidelines:
-
-- **Issue First**: For significant changes, it's best to open an issue for discussion before diving into coding.
-- **Stay Updated**: Ensure your fork is always updated with the main branch to avoid merge conflicts.
-- **Documentation**: Update the README or other documentation if necessary.
-- **Testing**: Ensure your code passes all tests and doesn't introduce new bugs.
-- **Respect Code Style**: Follow the coding style and conventions used throughout the project.
-
----
-
-Thank you for contributing to ABMA! Your efforts help improve the project for everyone.
-
----
+See `CONTRIBUTING.md` for detailed guidelines.
 
 ## License
 
-### MIT License
-
-ABMA is licensed under the MIT License. This means that anyone is free to copy, modify, publish, use, compile, sell, or distribute the software, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means.
-
-#### Key Points:
-
-- **Commercial use**: You can use the software for commercial purposes.
-- **Modification**: You can make changes to the software.
-- **Distribution**: You can distribute the software to others.
-- **Sublicense**: You can grant/extend a license to others.
-- **Private use**: You can use the software for private purposes.
-
-However, there are some conditions:
-
-- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the software.
-- The software is provided "as is", without warranty of any kind.
-
-For the full license text, you can refer to the `LICENSE` file in the repository or visit [MIT License](https://opensource.org/licenses/MIT).
-
----
-
-This section provides a brief overview of the MIT License for ABMA. If you decide to use this license, you should include a `LICENSE` file in your repository with the full license text. If you prefer another license, please specify, and I can provide details on that.
-
----
+ABMA is licensed under the MIT License, allowing commercial use, modification, distribution, and private use. See the `LICENSE` file for full details.
 
 ## Contact & Support
 
-For any questions, feedback, or suggestions regarding ABMA, please reach out to the project maintainers:
+- **Rexford Sosu**: [Email](rexfordsosu@outlook.com), [GitHub](https://github.com/niirex1), [LinkedIn](https://www.linkedin.com/in/rexford-sosu-b4593b57/)
 
-- **Rexford Sosu**
-  - Email: rexfordsosu@outlook.com
-  - GitHub: [@rexfordsosu](https://github.com/niirex1)
-  - LinkedIn: [Rexford's LinkedIn](https://www.linkedin.com/in/rexford-sosu-b4593b57/)
+Questions, feedback, or suggestions? Reach out to us!
 
-We appreciate your interest in ABMA and look forward to collaborating with you!
 ---
