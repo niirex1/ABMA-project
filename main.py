@@ -1,34 +1,43 @@
-import os
-from bayesian_inference_model import BayesianInferenceModel
-from metamorphic_testing import MetamorphicTesting
-from dynamic_bayesian_updating import DynamicBayesianUpdating
+# main.py
+import preprocessing
+import feature_selection
+import classification
+import metamorphic_testing
+import bayesian_inference
 
 def load_smart_contract(file_path):
-    """
-    Load the smart contract source code from the specified file path.
-    """
+    # Function to load smart contract source code
+    # This is a placeholder function - you need to implement the actual code loading logic
     with open(file_path, 'r') as file:
-        return file.read()
+        code = file.read()
+    return code
 
 def main():
-    # Load the smart contract source code
-    file_path = input("Enter the path to your smart contract source code: ")
-    smart_contract_code = load_smart_contract(file_path)
+    # Load smart contract source code
+    contract_code = load_smart_contract('path_to_contract.sol')
 
-    # Initialize the Bayesian Inference Model
-    bayesian_model = BayesianInferenceModel()
-    vulnerability_likelihood = bayesian_model.assess_vulnerabilities(smart_contract_code)
-    print(f"Likelihood of vulnerabilities: {vulnerability_likelihood}")
+    # Data Preprocessing
+    preprocessed_code = preprocessing.process_code(contract_code)
 
-    # Execute Metamorphic Testing
-    metamorphic_testing = MetamorphicTesting()
-    test_cases = metamorphic_testing.generate_test_cases(smart_contract_code)
-    test_results = metamorphic_testing.run_tests(test_cases)
+    # Feature Selection
+    features = feature_selection.select_features(preprocessed_code)
 
-    # Apply Dynamic Bayesian Updating
-    dynamic_updating = DynamicBayesianUpdating()
-    updated_model = dynamic_updating.update_model(bayesian_model, test_results)
-    print("Bayesian model updated based on test outcomes.")
+    # Metamorphic Testing
+    test_cases = metamorphic_testing.generate_test_cases(features)
+
+    # Classification
+    vulnerabilities = classification.classify_contract(test_cases)
+
+    # Bayesian Inference and Dynamic Adaptation
+    bayesian_model = bayesian_inference.create_model(preprocessed_code)
+    bayesian_results = bayesian_inference.analyze_code(bayesian_model, features)
+
+    # Update the Bayesian model based on metamorphic testing outcomes
+    bayesian_inference.update_model(bayesian_model, test_cases, vulnerabilities)
+
+    # Output results
+    print("Identified vulnerabilities:", vulnerabilities)
+    print("Bayesian Analysis Results:", bayesian_results)
 
 if __name__ == "__main__":
     main()
