@@ -19,8 +19,6 @@ The Adaptive Bayesian Metamorphic Assessment (ABMA) introduces a revolutionary a
 
 3. **Classification and Metamorphic Testing Scripts**: Components that combine the insights from feature selection with dynamic metamorphic testing methodologies. This includes mechanisms for classifying contracts based on their vulnerability profiles and identifying zero-day vulnerabilities.
 
-4. **Bayesian Inference and Dynamic Adaptation**: A suite of scripts that leverage Bayesian inference for vulnerability assessment and dynamically adapt the testing approach based on emerging data and patterns in smart contract behavior.
-
 ## Getting Started
 
 ### Prerequisites
